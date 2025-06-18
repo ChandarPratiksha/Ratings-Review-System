@@ -14,7 +14,7 @@ app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Session middleware - make sure it's before routes
+// Session middleware
 app.use(session({
   secret: 'your-secret-key',
   resave: false,
@@ -55,10 +55,10 @@ app.use('/api/reviews', reviewRoutes);
 
 // Root
 app.get('/', (req, res) => {
-  res.send('🎉 Ratings and Reviews API is running!');
+  res.send('Ratings and Reviews API is running!');
 });
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`🚀 Server started on http://localhost:${PORT}`);
+  console.log(`Server started on http://localhost:${PORT}`);
 });
