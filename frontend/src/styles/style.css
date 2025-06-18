@@ -17,7 +17,7 @@
   text-align: center;
 }
 
-/* Optional: add subtle animation when card loads */
+
 .page-container:hover {
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
 }
@@ -140,6 +140,7 @@
   margin-top: 10px;
   text-align: center;
 }
+
 /* Navbar */
 .navbar {
   background-color: #f4f4f4;
