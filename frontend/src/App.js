@@ -12,16 +12,16 @@ import Navbar from './components/Navbar';
 
 function App() {
   const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true); // ⏳ Wait before rendering routes
+  const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
     // Check session on app load
     axios.get('http://localhost:5000/api/auth/session', { withCredentials: true })
       .then((res) => {
         if (res.data.loggedIn) {
-          setUser(res.data.user); // Restore session user
+          setUser(res.data.user); //Restore session user
         }
-        setLoading(false); // ✅ Done checking
+        setLoading(false); //Done checking
       })
       .catch((err) => {
         console.error('Session check failed:', err);
