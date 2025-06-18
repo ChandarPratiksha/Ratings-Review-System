@@ -35,7 +35,7 @@ db.connect(err => {
     console.error('Error connecting to database:', err);
     process.exit(1);
   }
-  console.log('✅ Connected to MySQL Database');
+  console.log('Connected to MySQL Database');
 });
 
 // Make db accessible
