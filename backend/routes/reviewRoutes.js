@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 const db = require('../config/db');
 
-// Submit rating/review
+// Submit rating and review
 router.post('/submit', (req, res) => {
   const { product_id, user_id, rating, review, img } = req.body;
 
@@ -48,7 +48,7 @@ router.get('/:productId', (req, res) => {
   });
 });
 
-// Delete a review by ID
+// Deleting a review by ID
 router.delete('/delete/:reviewId', (req, res) => {
   const reviewId = req.params.reviewId;
 
