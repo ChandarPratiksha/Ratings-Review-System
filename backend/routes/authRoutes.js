@@ -1,13 +1,12 @@
 // backend/routes/authRoutes.js
 const express = require('express');
 const router = express.Router();
-const db = require('../config/db'); // your db connection
-// Add this at the top of authRoutes.js (already imported express)
+const db = require('../config/db'); 
 router.post('/login', (req, res) => {
   const { username, password } = req.body;
 
   if (username === 'Pratiksha' && password === '12345') {
-    // Save admin to session
+    // session
     req.session.user = { username, role: 'admin', user_id: 0 };
     return res.json({ success: true, user: req.session.user });
   }
@@ -29,7 +28,7 @@ router.post('/login', (req, res) => {
   });
 });
 
-// Add this route for session persistence
+//session persistence
 router.get('/session', (req, res) => {
   if (req.session.user) {
     res.json({ loggedIn: true, user: req.session.user });
