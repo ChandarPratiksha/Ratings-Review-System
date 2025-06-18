@@ -24,7 +24,6 @@ function Login({ onLogin }) {
       if (res.data.success) {
   onLogin(res.data.user); // passing full user object
 
-// either 'admin' or 'user'
       } else {
         setError('Invalid credentials');
       }
